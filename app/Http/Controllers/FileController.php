@@ -53,7 +53,7 @@ class FileController extends Controller
             }
 
 
-            $path = $file->storeAs($storagePath);
+            $path = $file->storeAs('uploads/' . $parent->path(), $customName, 'public');
             $url = asset('storage/' . $path);
             $uploadedFile = [
                 'path' => $path,
