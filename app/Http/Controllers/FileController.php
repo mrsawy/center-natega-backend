@@ -28,7 +28,7 @@ class FileController extends Controller
     {
 
         $validated = $request->validate([
-            'file' => ['required', 'file', 'mimes:jpg,jpeg,png,pdf', 'max:15120'],
+            'file' => ['required', 'file', 'mimes:jpg,jpeg,png,pdf,xlsx,csv,json,pem,text', 'max:151200'],
             "parent_id" => ["nullable", "string"]
         ]);
 
